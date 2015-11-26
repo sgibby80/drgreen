@@ -1,0 +1,18 @@
+<h1>Ticker List!</h1>
+
+<table border='1'>
+  <tr>
+    <th>Ticker</th>
+    <th>Description</th>
+  </tr>
+
+<% @stock.each do |stock| %>
+<tr>
+  <td><%= stock.ticker %></td>
+  <td><%= stock.description %></td>
+</tr>
+<% end %>
+</table>
+<br>
+<p>What would you like to do next:</p>
+<%= link_to 'Create a new ticker', 'stocks/new' %>
